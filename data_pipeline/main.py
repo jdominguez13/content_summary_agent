@@ -1,9 +1,16 @@
 import os
+import sys
+
+if os.getenv("GITHUB_ACTIONS") != "true":
+    print("This script is intended to be run only in GitHub Actions CI/CD.")
+    sys.exit(1)
+
 # from dotenv import load_dotenv
 from fetch_articles import fetch_articles
 from summarize import summarize_article
 from store_snowflake import store_articles
 from emailer import send_email
+
 
 # load_dotenv()
 
