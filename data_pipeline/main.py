@@ -1,11 +1,11 @@
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from fetch_articles import fetch_articles
 from summarize import summarize_article
 from store_snowflake import store_articles
 from emailer import send_email
 
-load_dotenv()
+# load_dotenv()
 
 def generate_blog_post(summaries):
     # Simple blog post generator
