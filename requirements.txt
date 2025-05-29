@@ -1,3 +1,10 @@
+import os
+import sys
+
+if os.getenv("GITHUB_ACTIONS") != "true":
+    print("This script is intended to be run only in GitHub Actions CI/CD.")
+    sys.exit(1)
+
 openai
 requests
 beautifulsoup4
@@ -7,4 +14,4 @@ streamlit
 python-dotenv
 pandas
 transformers
-torch 
+torch
