@@ -1,0 +1,10 @@
+openai
+requests
+beautifulsoup4
+newspaper3k
+snowflake-connector-python
+streamlit
+python-dotenv
+pandas
+transformers
+torch 
