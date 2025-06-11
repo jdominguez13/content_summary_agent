@@ -21,6 +21,7 @@ def get_connection():
 def store_articles(articles):
     conn = get_connection()
     cur = conn.cursor()
+    cur.execute(f"USE SCHEMA {SNOWFLAKE_DATABASE}.{SNOWFLAKE_SCHEMA}")
     cur.execute("""
         CREATE TABLE IF NOT EXISTS ARTICLES (
             ID INTEGER AUTOINCREMENT,
