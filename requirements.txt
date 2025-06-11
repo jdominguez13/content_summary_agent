@@ -8,3 +8,4 @@ python-dotenv
 pandas
 transformers
 torch
+pyarrow<19.0.0
