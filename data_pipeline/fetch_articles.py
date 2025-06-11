@@ -16,7 +16,7 @@ def fetch_articles(days=1, max_results=20):
     params = {
         'q': TOPIC,
         'from': from_date,
-        'sortBy': 'publishedAt',
+        'sortBy': 'popularity',
         'language': 'en',
         'apiKey': NEWS_API_KEY,
         'pageSize': max_results
