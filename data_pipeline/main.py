@@ -29,7 +29,7 @@ def main():
     for article in articles:
         print(f"Summarizing: {article['title']}")
         article['summary'] = summarize_article(article['content'] or article['description'])
-    store_articles(articles)
+    # store_articles(articles)  # Removed for this workflow
     blog_post = generate_blog_post(articles)
     send_email(
         subject="Daily AI Productivity & Revenue News",
