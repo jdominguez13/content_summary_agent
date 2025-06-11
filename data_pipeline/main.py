@@ -16,7 +16,7 @@ from emailer import send_email
 
 def generate_blog_post(summaries):
     # Simple blog post generator
-    blog = "<h2>AI Productivity & Revenue News</h2>\n<ul>"
+    blog = "<h2>Daily AI Rundown</h2>\n<ul>"
     for s in summaries:
         blog += f"<li><b>{s['title']}</b>: {s['summary']}<br><a href='{s['url']}'>Read more</a></li>"
     blog += "</ul>"
@@ -32,7 +32,7 @@ def main():
     # store_articles(articles)  # Removed for this workflow
     blog_post = generate_blog_post(articles)
     send_email(
-        subject="Daily AI Productivity & Revenue News",
+        subject="Daily AI Rundown",
         body=blog_post
     )
     print("Done.")

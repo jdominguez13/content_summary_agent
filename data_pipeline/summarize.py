@@ -2,7 +2,7 @@ from transformers import pipeline
 
 def summarize_article(content):
     summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
-    summary = summarizer(content, max_length=50, min_length=30, do_sample=False)
+    summary = summarizer(content, max_length=100, min_length=30, do_sample=False)
     return summary[0]['summary_text']
 
 if __name__ == '__main__':

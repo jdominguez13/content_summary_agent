@@ -6,7 +6,7 @@ NEWS_API_KEY = os.getenv('NEWS_API_KEY')
 
 print("Loaded NEWS_API_KEY:", NEWS_API_KEY)
 
-TOPIC = 'AI productivity OR AI revenue OR artificial intelligence productivity OR artificial intelligence revenue'
+TOPIC = 'AI productivity OR AI revenue OR AI innovation OR artificial intelligence productivity OR artificial intelligence revenue OR artificial intelligence innovation'
 
 NEWS_API_URL = 'https://newsapi.org/v2/everything'
 
