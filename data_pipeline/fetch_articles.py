@@ -12,10 +12,12 @@ NEWS_API_URL = 'https://newsapi.org/v2/everything'
 
 
 def fetch_articles(days=1, max_results=20):
-    from_date = (datetime.utcnow() - timedelta(days=days)).strftime('%Y-%m-%d')
+    now = datetime.utcnow()
+    from_date = now - timedelta(days=days)
     params = {
         'q': TOPIC,
-        'from': from_date,
+        'from': from_date.isoformat(timespec='seconds') + 'Z',
+        'to': now.isoformat(timespec='seconds') + 'Z',
         'sortBy': 'publishedAt',
         'language': 'en',
         'apiKey': NEWS_API_KEY,
