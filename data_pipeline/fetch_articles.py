@@ -11,7 +11,7 @@ TOPIC = 'AI productivity OR AI revenue OR AI innovation OR artificial intelligen
 NEWS_API_URL = 'https://newsapi.org/v2/everything'
 
 
-def fetch_articles(days=1, max_results=20):
+def fetch_articles(days=1, max_results=10):
     from_date = (datetime.utcnow() - timedelta(days=days)).strftime('%Y-%m-%d')
     params = {
         'q': TOPIC,
